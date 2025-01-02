@@ -7,7 +7,7 @@ import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 import { defineConfig } from 'vite'
 
 export default {
-	// base:'/vite-config/',
+	base:'/js-project/',
 	esbuild: {
 		jsxFactory: 'create',
 		jsxInject: `import {create} from './create'`,
