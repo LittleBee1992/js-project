@@ -1,12 +1,11 @@
-// vite.config.ts
+import { defineConfig } from 'vite'
 import Inspect from 'vite-plugin-inspect'
 import checker from 'vite-plugin-checker'
 import path, { resolve } from 'path'
 import { sync } from 'glob'
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
-import { defineConfig } from 'vite'
 
-export default {
+export default defineConfig( {
 	base:'/js-project/',
 	esbuild: {
 		jsxFactory: 'create',
@@ -48,4 +47,4 @@ export default {
 			'@': path.resolve(__dirname, './src'),
 		},
 	},
-}
+})
