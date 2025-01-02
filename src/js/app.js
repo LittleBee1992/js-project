@@ -153,9 +153,8 @@ const App = () => {
 		// const get total money
 		const totalMoney = item.getTotalMoney()
 		// show current money in UI
-		const data = ui.showCurrentMoney(totalMoney)
+		ui.showCurrentMoney(totalMoney)
 		// calculate percent
-		console.log(data);
 		ui.calculatePercent(totalMoney)
 		// hide edit state
 		ui.editState('inline', 'none')
