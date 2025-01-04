@@ -70,7 +70,7 @@ const calculatePercent = item => {
 		if (data < percent) {
 			
 			data++
-			console.log(data)
+			
 			totalPercent.textContent = `${data}%`
 			circle.style.cssText = `--percent: ${data}`
 			circle.attributes.stroke.value = 'lime'
@@ -146,13 +146,15 @@ const addItemToForm = input => {
 	input.money.value = item.currentItem().money
 }
 // show current Money + counter
-const showCurrentMoney = money => {
+const showCurrentMoney = (money) => {
 	// document.querySelector(UISelectors.totalMoney).textContent = money + '$'
 
 	const totalMoney = document.querySelector(UISelectors.totalMoney)
 	
+	
 	let data = 0
 	let speed = parseInt(money / 100)
+
 	const counter = () => {
 		if (money > 0) {
 			data += speed
