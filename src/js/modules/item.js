@@ -34,7 +34,7 @@ const addItem=(name,money,category,categoryIncludes)=>{
         money = money
     }
 
-    console.log(money);
+   
     let ID;
     // create item id
     if(data.items.length >0){

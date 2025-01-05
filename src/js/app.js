@@ -26,6 +26,10 @@ const App = () => {
 			ui.clearFields(input)
 			// set new item to local storage
 			storage.setCookies(newItem)
+
+			// log data
+		const logData = item.logData()
+		console.log(logData)
 		}
 	}
 	// edit submit
@@ -98,16 +102,14 @@ const App = () => {
 		ui.removeItemsUI()
 		// const get total money
 		const totalMoney = item.getTotalMoney()
-		console.log(totalMoney);
+		
 		// show current money in UI
 		ui.showCurrentMoney(totalMoney)
 		// calculate percent
 		ui.calculatePercent(totalMoney)
 		// remove all from local storage
 		storage.removeLocalStorage()
-		// log data
-		const logData = item.logData()
-		console.log(logData)
+		
 	}
 
 	// back submit
@@ -158,6 +160,7 @@ const App = () => {
 		ui.calculatePercent(totalMoney)
 		// hide edit state
 		ui.editState('inline', 'none')
+		
 	}
 
 	loadEventListeners()

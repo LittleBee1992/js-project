@@ -62,11 +62,11 @@ const calculatePercent = item => {
 	const totalPercent = document.querySelector(UISelectors.totalPercent)
 	// calculate percent
 	const percent = parseInt((item / 1000000) * 100)
-
+	
 	let data = 0
 
-	totalPercent.textContent = `0%`
-	circle.style.cssText = `--percent: 0 `
+	totalPercent.textContent = `${data}%`
+	circle.style.cssText = `--percent: ${data} `
 	circle.attributes.stroke.value = ''
 	// counter percent
 	const countPercent = () => {
@@ -74,14 +74,13 @@ const calculatePercent = item => {
 			
 			data++
 			
-			totalPercent.textContent = `${data}%`
+			totalPercent.textContent = data + '%'
 			circle.style.cssText = `--percent: ${data}`
 			circle.attributes.stroke.value = 'lime'
-			if (data >= percent) {
-				data = percent
-				clearInterval(counts)
-			} else if (data >= 100) {
+			console.log(data);
+			if (data >= 100) {
 				data = 100
+				
 				clearInterval(counts)
 			}
 		} else if (data > percent) {
@@ -89,12 +88,10 @@ const calculatePercent = item => {
 			circle.style.cssText = `--percent: ${data}`
 			data--
 			circle.attributes.stroke.value = 'red'
-			if (data <= percent) {
-				data = percent
-				clearInterval(counts)
-			} else if (data <= -100) {
+			if (data <= -100) {
 				data = -100
-			}
+				clearInterval(counts)
+			} 
 			
 		}
 
