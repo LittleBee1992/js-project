@@ -13,7 +13,7 @@ const App = () => {
 			const selectedCategory = ui.selectCategory()
 			const category = ui.checkCategory(selectedCategory)
 			// add item to data strucutre
-			const newItem = item.addItem(input.name.value, input.money.value, category)
+			const newItem = item.addItem(input.name.value, input.money.value, category,selectedCategory)
 			// add item to UI
 			ui.addItem(newItem)
 			// get total money
