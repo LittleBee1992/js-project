@@ -63,9 +63,15 @@ const getElementByID=(id)=>{
     return found
 }
 // update item
-const updateItem = (name,money,category)=>{
+const updateItem = (name,money,category,categoryIncludes)=>{
     // money to number
     money = parseInt(money)
+    if(categoryIncludes.includes('-')){
+        money = -money
+    }else{
+        money = money * -1
+       
+    }
 
     let found
 

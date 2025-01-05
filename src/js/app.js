@@ -51,7 +51,7 @@ const App = () => {
 			const selectedCategory = ui.selectCategory()
 			const category = ui.checkCategory(selectedCategory)
 			// update item in data structure
-			const updatedItem = item.updateItem(input.name.value, input.money.value, category)
+			const updatedItem = item.updateItem(input.name.value, input.money.value, category,selectedCategory)
 			// update item in UI
 			ui.updateUI(updatedItem)
 			// const get total money

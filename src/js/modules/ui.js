@@ -65,6 +65,9 @@ const calculatePercent = item => {
 
 	let data = 0
 
+	totalPercent.textContent = `0%`
+	circle.style.cssText = `--percent: 0 `
+	circle.attributes.stroke.value = ''
 	// counter percent
 	const countPercent = () => {
 		if (data < percent) {
