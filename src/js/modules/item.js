@@ -29,7 +29,7 @@ const addItem=(name,money,category,categoryIncludes)=>{
     money = parseInt(money)
     
     if(categoryIncludes.includes('-')){
-        money =-money
+        money =money * -1
     }else{
         money = money
     }
