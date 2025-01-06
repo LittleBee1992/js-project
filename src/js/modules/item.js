@@ -89,9 +89,9 @@ const updateItem = (name,money,category,categoryIncludes)=>{
 // delete item
 const deleteItem =(id)=>{
     // get items id
-    // const ids = data.items.map(item=>{
-    //     return item.id
-    // })
+    // const ids = data.items.map(item=>item.id
+    // )
+    
     // // get index of item
     // const index = ids.indexOf(id)
     // // delete item
@@ -99,6 +99,7 @@ const deleteItem =(id)=>{
 
     data.items.forEach((item,index)=>{
         if(item.id === id){
+            console.log(index);
             data.items.splice(index,1)
         }
     })

@@ -77,7 +77,7 @@ const calculatePercent = item => {
 			totalPercent.textContent = data + '%'
 			circle.style.cssText = `--percent: ${data}`
 			circle.attributes.stroke.value = 'lime'
-			console.log(data);
+			
 			if (data >= 100) {
 				data = 100
 				
