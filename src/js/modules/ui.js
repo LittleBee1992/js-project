@@ -62,25 +62,26 @@ const calculatePercent = item => {
 	const totalPercent = document.querySelector(UISelectors.totalPercent)
 	// calculate percent
 	const percent = parseInt((item / 1000000) * 100)
-	
+
 	let data = 0
 
 	totalPercent.textContent = `${data}%`
 	circle.style.cssText = `--percent: ${data} `
 	circle.attributes.stroke.value = ''
+
 	// counter percent
+
 	const countPercent = () => {
 		if (data < percent) {
-			
 			data++
-			
+
 			totalPercent.textContent = data + '%'
 			circle.style.cssText = `--percent: ${data}`
 			circle.attributes.stroke.value = 'lime'
-			
+
 			if (data >= 100) {
 				data = 100
-				
+
 				clearInterval(counts)
 			}
 		} else if (data > percent) {
@@ -91,14 +92,11 @@ const calculatePercent = item => {
 			if (data <= -100) {
 				data = -100
 				clearInterval(counts)
-			} 
-			
+			}
 		}
 
 		circle.style.cssText = `--percent: ${data}`
 		totalPercent.textContent = `${data}%`
-
-	
 	}
 
 	let counts = setInterval(countPercent, 20)
@@ -117,7 +115,7 @@ const removeItemsUI = () => {
 const selectCategory = () => {
 	const category = document.querySelector(UISelectors.category)
 	const selectedCategory = category.options[category.selectedIndex].text
-	
+
 	return selectedCategory
 }
 // check category options
@@ -146,12 +144,11 @@ const addItemToForm = input => {
 	input.money.value = item.currentItem().money
 }
 // show current Money + counter
-const showCurrentMoney = (money) => {
+const showCurrentMoney = money => {
 	// document.querySelector(UISelectors.totalMoney).textContent = money + '$'
 
 	const totalMoney = document.querySelector(UISelectors.totalMoney)
-	
-	
+
 	let data = 0
 	let speed = parseInt(money / 100)
 
