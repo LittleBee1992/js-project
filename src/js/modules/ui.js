@@ -78,7 +78,7 @@ const calculatePercent = item => {
 			totalPercent.textContent = data + '%'
 			circle.style.cssText = `--percent: ${data}`
 			circle.attributes.stroke.value = 'lime'
-
+			// setTimeout(countPercent,20)
 			if (data >= 100) {
 				data = 100
 
@@ -89,6 +89,8 @@ const calculatePercent = item => {
 			circle.style.cssText = `--percent: ${data}`
 			data--
 			circle.attributes.stroke.value = 'red'
+
+			// setTimeout(countPercent,20)
 			if (data <= -100) {
 				data = -100
 				clearInterval(counts)
@@ -98,7 +100,7 @@ const calculatePercent = item => {
 		circle.style.cssText = `--percent: ${data}`
 		totalPercent.textContent = `${data}%`
 	}
-
+	// countPercent()
 	let counts = setInterval(countPercent, 20)
 }
 // delete item
