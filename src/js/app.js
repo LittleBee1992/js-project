@@ -29,7 +29,7 @@ const App = () => {
 
 			// log data
 		const logData = item.logData()
-		console.log(logData)
+		
 		}
 	}
 	// edit submit
@@ -40,6 +40,7 @@ const App = () => {
 			const id = parseInt(listID)
 			// get item by ID
 			const itemToUpdate = item.getElementByID(id)
+			console.log(itemToUpdate);
 			// set current Item
 			item.setCurrentItem(itemToUpdate)
 			// add item to Fields

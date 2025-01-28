@@ -29,7 +29,7 @@ const addItem=(name,money,category,categoryIncludes)=>{
     money = parseInt(money)
     
     if(categoryIncludes.includes('-')){
-        money =money * -1
+        money = money * -1
     }else{
         money = money
     }
@@ -54,12 +54,14 @@ const addItem=(name,money,category,categoryIncludes)=>{
 // get item by id
 const getElementByID=(id)=>{
     let found
+    
 
-    data.items.forEach(item=>{
+     data.items.map(item=>{
         if(item.id === id){
             found = item
         }
     })
+   
     return found
 }
 // update item
