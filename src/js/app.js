@@ -1,3 +1,4 @@
+import '../sass/style.scss'
 import * as ui from './modules/ui.js'
 import * as item from './modules/item.js'
 import * as storage from './modules/storage.js'

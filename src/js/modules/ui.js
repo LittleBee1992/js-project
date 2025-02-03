@@ -117,7 +117,7 @@ const removeItemsUI = () => {
 const selectCategory = () => {
 	const category = document.querySelector(UISelectors.category)
 	const selectedCategory = category.options[category.selectedIndex].text
-
+	console.log(selectedCategory);
 	return selectedCategory
 }
 // check category options
